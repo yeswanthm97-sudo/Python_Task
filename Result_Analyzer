@@ -1,0 +1,59 @@
+def analyze_result(name, roll, marks):
+
+    total = sum(marks)
+    average = total / len(marks)
+
+    
+    if average >= 90:
+        grade = "A"
+    elif average >= 75:
+        grade = "B"
+    elif average >= 60:
+        grade = "C"
+    elif average >= 40:
+        grade = "D"
+    else:
+        grade = "Fail"
+
+    print("Student:", name, "(Roll:", roll, ")")
+    print("Total:", total)
+    print("Average:", average)
+    print("Grade:", grade)
+
+    print("Subjects below 40:")
+
+    found = False
+
+    for i in range(len(marks)):
+        if marks[i] < 40:
+            print("Subject", i + 1)
+            found = True
+
+    if not found:
+        print("None")
+
+name = "Aarav"
+roll = 101
+marks = [88.5, 35.0, 76.0, 92.5, 48.0]
+
+analyze_result(name, roll, marks)
+
+name = "Saanvi"
+roll = 102
+marks = [55.0, 62.5, 70.0, 80.0, 90.0]
+analyze_result(name, roll, marks)
+
+name = "Rohan"
+roll = 103
+marks = [30.0, 45.0, 55.0, 60.0, 70.0]
+analyze_result(name, roll, marks)
+
+name = "Ananya"
+roll = 104
+marks = [40.0, 45.0, 50.0, 55.0, 60.0]
+analyze_result(name, roll, marks)
+
+name = "Aditya"
+roll = 105
+marks = [85.0, 90.0, 75.0, 80.0, 95.0]
+analyze_result(name, roll, marks)
